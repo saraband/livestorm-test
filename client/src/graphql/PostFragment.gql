@@ -1,0 +1,11 @@
+fragment Post on Post {
+  id
+  name
+  tagline
+  thumbnail_url
+  votes_count
+  comments_count
+  makers {
+    id
+  }
+}

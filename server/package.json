@@ -1,0 +1,16 @@
+{
+  "name": "livestorm-apollo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "saraband",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.3.2",
+    "apollo-server": "^2.4.8",
+    "graphql": "^14.2.0",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "serve": "nodemon --config nodemon.json index.js"
+  }
+}

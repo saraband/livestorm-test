@@ -1,0 +1,7 @@
+#import "./PostFragment.gql"
+
+query getPostsList ($daysAgo: Int) {
+  postsList (daysAgo: $daysAgo) {
+    ...Post
+  }
+}
