@@ -1,18 +1,16 @@
 <template>
   <div id="day-stats">
-    <div>
-      <ul id="stats-list">
-        <li
-          v-for="key in statsKeys"
-          :key="key"
-          class="stats-item"
-        >
-          <strong v-if="areStatsAvailable">{{ stats[key] }}</strong>
-          <strong v-else>-</strong>
-          <span>{{ key | uppercase }}</span>
-        </li>
-      </ul>
-    </div>
+    <ul id="stats-list">
+      <li
+        v-for="key in statsKeys"
+        :key="key"
+        class="stats-item"
+      >
+        <strong v-if="areStatsAvailable">{{ stats[key] }}</strong>
+        <strong v-else>-</strong>
+        <span>{{ key | uppercase }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -32,7 +30,7 @@ export default {
   },
   computed: {
     /*  Compute the stats for the current day
-     *  based on the data passed through prop
+     *  based on the post data passed through prop
      */
     stats () {
       // No data available yet

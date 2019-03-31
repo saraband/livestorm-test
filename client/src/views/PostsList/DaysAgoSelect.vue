@@ -26,7 +26,7 @@ export default {
         name: 'postsList',
         params: {
           // If we select 0 days ago (i.e. Today), ignore the parameter
-          daysAgo: daysAgo <= 0
+          daysAgo: daysAgo === 0
             ? undefined
             : daysAgo
         }

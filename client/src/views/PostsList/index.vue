@@ -1,6 +1,6 @@
 <template>
   <div id="posts-list-container">
-    <!-- "DAYS AGO" SELECT SECTION -->
+    <!-- "DAYS AGO" SELECT -->
     <div id="days-ago-select-section">
       <DaysAgoSelect />
     </div>
@@ -71,8 +71,8 @@ export default {
 
       /*  User left `Today` and is now in a `days ago` page
        *    => Make the query use the cache if it exists
-       *       as posts cannot be created in the past,
-       *       it will be most likely right
+       *       as a posts list from days ago cannot change,
+       *       the cached data will likely be right
        *    => Stop the polling
        */
       } else if (from.path === '/posts') {
@@ -104,7 +104,7 @@ export default {
   @import "@/assets/styles/global.scss";
 
   /*  Pre-compute PostBlock size based on
-   *  layout width and spacing needed (here 1024px)
+   *  layout width (here 1024px) and spacing needed
    */
   $spacing: 20px;
   $num-blocks: 3;
